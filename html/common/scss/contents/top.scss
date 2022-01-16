@@ -1,0 +1,1244 @@
+@charset "utf-8";
+//setting
+@import '../settings';
+@keyframes gradient {
+	0% {
+		background-position: 50% 100%;
+	}
+	100% {
+		background-position: 50% 0%;
+	}
+}
+@keyframes grawidth {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes grawidtho {
+	0% {
+		width: 100%;
+	}
+	100% {
+		width: 0%;
+	}
+}
+@keyframes fadeLeftAnime{
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes fadeRightAnime{
+	from {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes show{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes kuru{
+	from{
+		transform: rotateY(90deg);
+		}
+	to{
+		transform: rotateY(0deg);
+		}
+}
+
+@keyframes fadeUpAnime{
+  from {
+	opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+	opacity: 1;
+	transform: translateY(0);
+  }
+}
+.trigger{
+	opacity: 0;
+}
+.kuru {
+	animation-name: none;
+	transform: rotateY(90deg);
+	&.trigger{
+		opacity: 1;
+	}
+	&.fade {
+		animation-name: kuru;
+		animation-duration:1s;
+		animation-fill-mode:forwards;
+		transition-delay: .5s;
+	}
+}
+.delay > div {
+	opacity: 0;
+}
+.fadeUp{
+	opacity:0;
+	animation-name: fadeUpAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transition-delay: .5s;
+}
+.fadeLeft {
+	animation-name: none;
+	opacity: 0;
+	&.fade {
+		animation-name: fadeLeftAnime;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		transition-delay: .5s;
+	}
+}
+.fadeRight {
+	animation-name: none;
+	opacity:0;
+	&.fade {
+		animation-name: fadeRightAnime;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		transition-delay: .5s;
+	}
+}
+.div {
+	&-mv {
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: 100% 0%;
+		background-size: contain;
+		@media #{$tablet}{
+			background-size: cover;
+			background-position: 0% 100%;
+			@media #{$phone}{
+				background-position: 50% 100%;
+			}
+		}
+		&_scrool {
+			position: absolute;
+			left: 3%;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+			width: 1rem;
+			height: 8rem;
+			p {
+				width: 1rem;
+				-ms-writing-mode: tb-rl;
+				writing-mode: vertical-rl;
+				font-size: 1rem;
+				line-height: 1;
+			}
+			span {
+				width: .1rem;
+				height: 5rem;
+				background: linear-gradient( 0deg, rgba(#fff,0) 0%, rgba(#fff,0) 25%, rgba(#fff,1) 50%,rgba(#fff,0) 75%, rgba(#fff,0) 100%);
+				background-size: 100% 400%;
+				animation: gradient 5s infinite;
+				margin-top: .5rem;
+			}
+		}
+		&_catch {
+			position: absolute;
+			height: 100%;
+			left: 9.5%;
+			top: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			@media #{$tablet}{
+				@media #{$phone}{
+				}
+			}
+			p {
+				font-size: 2rem;
+				line-height: 1.2;
+				@media #{$tablet}{
+					font-size: 2rem;
+					@media #{$phone}{
+						font-size: 1.5rem;
+					}
+				}
+				strong {
+					font-size: 6.4rem;
+					@media #{$tablet}{
+						font-size: 4.8rem;
+						line-height: 1;
+						display: block;
+						padding-bottom: .5em;
+						@media #{$phone}{
+							font-size: 3.8rem;
+						}
+					}
+				}
+			}
+		}
+		&_btn {
+			margin-top: 3.5rem;
+		}
+	}
+}
+.section {
+	&-service {
+		max-width: $max;
+		margin: 0 auto;
+		position: relative;
+		padding: 10vh 3% 15vh;
+		z-index: 1;
+		@media #{$tablet}{
+			padding-top: 10vw;
+			padding-bottom: 15vw;
+			@media #{$phone}{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		&_header {
+			text-align: left;
+			padding: 7rem 0 9vh 0;
+			@media #{$tablet}{
+				padding-bottom: 9vw;
+			}
+			&-ttl {
+				font-size: 4rem;
+				line-height: 1.3;
+				position: relative;
+				&:before {
+					content: "";
+					background: url("../../img/common/mark.svg") no-repeat;
+					background-size: 7.2rem auto;
+					width: 7.2rem;
+					height: 6.2rem;
+					position: absolute;
+					top: -7rem;
+					left: 0;
+				}
+				@media #{$phone}{
+					font-size: 2.8rem;
+				}
+			}
+			p {
+				font-size: 1.6rem;
+				@media #{$phone}{
+					font-size: 1.4rem;
+				}
+			}
+		}
+		&_inner {
+			&-tab {
+				width: 100%;
+				.slick-track {
+					display: flex !important;
+					justify-content: space-between;
+					@media #{$phone}{
+						flex-wrap: wrap;
+					}
+				}
+				&_slide {
+					width: 23% !important;
+					@media #{$phone}{
+						width: 48% !important;
+					}
+					&.slick-close {
+						.section-service_inner-tab_item {
+							&:after {
+								content: "";
+								width: 0;
+								height: .3rem;
+								position: absolute;
+								left: 0;
+								top: 0;
+								background: linear-gradient(90deg,$gra);
+								animation-name: grawidtho;
+								animation-duration: .5s;
+								animation-fill-mode: forwards;
+							}
+						}
+					}
+					&.slick-current {
+						.section-service_inner-tab_item {
+							color: #fff;
+							i {
+								-webkit-filter: grayscale(0%);
+								-moz-filter: grayscale(0%);
+								-ms-filter: grayscale(0%);
+								-o-filter: grayscale(0%);
+								filter: grayscale(0%);
+							}
+							&:after {
+								content: "";
+								width: 0;
+								height: .3rem;
+								position: absolute;
+								left: 0;
+								top: 0;
+								background: linear-gradient(90deg,$gra);
+								animation-name: grawidth;
+								animation-duration: .5s;
+								animation-fill-mode: forwards;
+								z-index: 2;
+							}
+						}
+					}
+				}
+				&_item {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					height: 9rem;
+					position: relative;
+					transition: all .5s;
+					cursor: pointer;
+					color: #bbb;
+					@media #{$desktop}{
+						&:hover {
+							color: #fff;
+							transition: all .5s;
+							i {
+								-webkit-filter: grayscale(0%);
+								-moz-filter: grayscale(0%);
+								-ms-filter: grayscale(0%);
+								-o-filter: grayscale(0%);
+								filter: grayscale(0%);
+							}
+						}
+					}
+					@media #{$phone}{
+						height: 7rem;
+					}
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: .1rem;
+						background: rgba(#fff,0.2);
+						z-index: 1;
+					}
+					p {
+						font-size: 1.8rem;
+						line-height: 1.3;
+						text-align: left;
+						@media #{$tablet}{
+							font-size: 1.4rem;
+							@media #{$phone}{
+								font-size: 1rem;
+							}
+						}
+					}
+					i {
+						font-size: 4.2rem;
+						-webkit-filter: grayscale(100%);
+						-moz-filter: grayscale(100%);
+						-ms-filter: grayscale(100%);
+						-o-filter: grayscale(100%);
+						filter: grayscale(100%);
+						@media #{$phone}{
+							font-size: 3rem;
+						}
+					}
+				}
+			}
+			.article-service {
+				background: $dark;
+				border-radius: .8rem;
+				padding: 1rem;
+				display: none;
+				@media #{$phone}{
+					padding: .3rem;
+				}
+				&.active {
+					display: block;
+					animation: show 1s linear 0s;
+				}
+				&_wrap {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					border-radius: .6rem;
+					background: linear-gradient(-90deg,$gra);
+					position: relative;
+					z-index: 1;
+					min-height: 48rem;
+					padding: 3rem 1.5rem;
+					&:before {
+						content: "";
+						width: calc(100% - .2rem);
+						height: calc(100% - .2rem);
+						background: $dark;
+						position: absolute;
+						left: .1rem;
+						top: .1rem;
+						z-index: -1;
+						border-radius: .6rem;
+					}
+					@media #{$tablet}{
+						flex-direction: column;
+						padding: 3rem;
+						@media #{$phone}{
+							padding: 1.5rem;
+						}
+					}
+				}
+				&_fig {
+					width: 58%;
+					text-align: center;
+					flex-shrink: 0;
+					img {
+						max-width: 98%;
+					}
+					@media #{$phone}{
+						width: 100%;
+						padding-bottom: 1rem;
+					}
+				}
+				&_header {
+					padding-bottom: 2.5rem;
+					@media #{$phone}{
+						padding-bottom: 1.5rem;
+					}
+					&-cat {
+						display: flex;
+						align-items: baseline;
+						justify-content: flex-start;
+						padding-bottom: .3rem;
+						figcaption {
+							font-size: 1.2rem;
+							color: $c1;
+							background: linear-gradient(90deg, $gra);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
+						i {
+							font-size: 4.2rem;
+							bottom: -0.1em;
+							position: relative;
+							margin-right: .5rem;
+							@media #{$phone}{
+								font-size: 3rem;
+							}
+						}
+					}
+					&-ttl {
+						font-size: 2.8rem;
+						line-height: 1.2;
+						@media #{$phone}{
+							font-size: 2rem;
+						}
+					}
+				}
+				&_inner {
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					&-btn {
+						padding-top: 3rem;
+						@media #{$phone}{
+							padding: 1.5rem 0;
+						}
+						a {
+							width: 20rem;
+							transition: all .5s;
+							@media #{$phone}{
+								margin: 0 auto;
+							}
+							&:after {
+								background: $dark;
+							}
+							@media #{$desktop}{
+								&:hover {
+									&:after {
+										background: linear-gradient(90deg,$gra);
+										transition: all .5s;
+									}
+								}
+							}
+						}
+					}
+					&-txt {
+						text-align: left;
+						@media #{$tablet}{
+						}
+						p {
+							font-size: 1.6rem;
+							@media #{$phone}{
+								font-size: 1.2rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-case {
+		padding: 5vh 0 15vh 0;
+		@media #{$tablet}{
+			padding-top: 5vw;
+			padding-bottom: 15vw;
+		}
+		&_header {
+			max-width: $max;
+			margin: 0 auto;
+			padding: 7rem 3% 5vh;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: center;
+			@media #{$tablet}{
+				padding-bottom: 5vw;
+				@media #{$phone}{
+					flex-direction: column;
+					padding-left: 5%;
+					padding-right: 5%;
+				}
+			}
+			&-ttl {
+				font-size: 4rem;
+				line-height: 1.3;
+				position: relative;
+				&:before {
+					content: "";
+					background: url("../../img/common/mark.svg") no-repeat;
+					background-size: 7.2rem auto;
+					width: 7.2rem;
+					height: 6.2rem;
+					position: absolute;
+					top: -7rem;
+					right: 0;
+				}
+				@media #{$phone}{
+					font-size: 2.8rem;
+				}
+			}
+			&-btn {
+				@media #{$phone}{
+					padding-top: 1rem;
+				}
+				a {
+					width: 20rem;
+				}
+			}
+		}
+		&_subttl {
+			max-width: 20rem;
+			line-height: 3rem;
+			border-radius: 5rem;
+			background: $bg;
+			color: #fff;
+			font-size: 1.6rem;
+			font-weight: 700;
+			text-align: center;
+			margin: 0 auto 4rem;
+			@media #{$phone}{
+				font-size: 1.4rem;
+			}
+			span {
+				color: $c1;
+				background: linear-gradient(90deg, $gra);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+			margin-top: 2rem;
+			button {
+				text-indent: -9999rem;
+				border: none;
+				background: rgba(#fff,0.5);
+				border-radius: 50%;
+				width: .6rem;
+				height: .6rem;
+				outline: none;
+				line-height: 0;
+				margin: 0 .4rem;
+				overflow: hidden;
+				padding: 0;
+			}
+			.slick-active {
+				button {
+					background: #fff;
+				}
+			}
+		}
+		.slick-arrow {
+			position: absolute;
+			top: 50%;
+			margin-top: -1.8rem;
+			width: 3.6rem;
+			height: 3.6rem;
+			text-align: center;
+			border-radius: 50%;
+			font-size: 2.2rem;
+			line-height: 3.6rem;
+			background: rgba(#fff,0.05);
+			transition: all .5s;
+			cursor: pointer;
+			z-index: 999;
+			@media #{$phone}{
+				top: -7.2rem;
+				margin-top: 0;
+			}
+			@media #{$desktop}{
+				&:hover {
+					background: none;
+				}
+			}
+		}
+		.slick-prev {
+			left: 0;
+			@media #{$tablet}{
+				left: 1rem;
+			}
+		}
+		.slick-next {
+			right: 0;
+			@media #{$tablet}{
+				right: 1rem;
+			}
+		}
+		&_slider {
+			max-width: 116rem;
+			padding: 0 6rem;
+			margin: 0 auto;
+			position: relative;
+			@media #{$phone}{
+				padding: 0;
+			}
+		}
+		.article-case {
+			width: 24rem;
+			height: 26rem;
+			background: #fff;
+			border-radius: .4rem;
+			padding: .9rem;
+			margin: 0 1rem;
+			position: relative;
+			overflow: hidden;
+			transition: background .2s .4s;
+			&_fig {
+				background: $c5;
+				height: 16.2rem;
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				transform: rotateY(0);
+				transition: opacity .2s .4s, transform .3s .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+			&_ttl {
+				display: flex;
+				height: 8rem;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.8rem;
+				color: $bg;
+				transform: rotateY(0);
+				transition: opacity .2s .4s, transform .3s .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+			&_inner {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: $bg;
+				padding: 2rem 1.5rem;
+				opacity: 0;
+				transform: rotateY(0);
+				transition: opacity .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+				ul {
+					li {
+						position: relative;
+						padding-left: 1.2em;
+						padding-bottom: .2rem;
+						font-size: 1.2rem;
+						&:before {
+							content: "-";
+							color: $c3;
+							position: absolute;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+			@media #{$tablet}{
+				&.hover {
+				background: rgba(#fff,0);
+				transition: background .1s;
+				.article-case {
+					&_fig {
+						opacity: 0;
+						transform: rotateY(-360deg);
+						transition: opacity .1s;
+					}
+					&_ttl {
+						opacity: 0;
+						transform: rotateY(-360deg);
+						transition: opacity .1s;
+					}
+					&_inner {
+						opacity: 1;
+						transform: rotateY(-360deg);
+					}
+				}
+				}
+			}
+			@media #{$desktop}{
+				&:hover {
+					background: rgba(#fff,0);
+					transition: background .1s;
+					.article-case {
+						&_fig {
+							opacity: 0;
+							transform: rotateY(-360deg);
+							transition: opacity .1s;
+						}
+						&_ttl {
+							opacity: 0;
+							transform: rotateY(-360deg);
+							transition: opacity .1s;
+						}
+						&_inner {
+							opacity: 1;
+							transform: rotateY(-360deg);
+						}
+					}
+				}
+			}
+		}
+		&_function {
+			background: rgba(#fff,0.05);
+			padding: 4rem 0;
+			.section-case_subttl {
+				background: $dark;
+			}
+		}
+		&_industry {
+			background: rgba(#fff,0.1);
+			padding: 4rem 0;
+			.slick-arrow {
+				background: $bg;
+			}
+		}
+	}
+	&-company {
+		max-width: $max;
+		margin: 0 auto;
+		position: relative;
+		padding: 5vh 3% 15vh 3%;
+		z-index: 1;
+		@media #{$tablet}{
+			padding-top: 5vw;
+			padding-bottom: 15vw;
+			@media #{$phone}{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		&_header {
+			text-align: left;
+			padding: 7rem 0 5vh 0;
+			@media #{$tablet}{
+				padding-bottom: 5vw;
+			}
+			&-ttl {
+				font-size: 4rem;
+				line-height: 1.3;
+				position: relative;
+				&:before {
+					content: "";
+					background: url("../../img/common/mark.svg") no-repeat;
+					background-size: 7.2rem auto;
+					width: 7.2rem;
+					height: 6.2rem;
+					position: absolute;
+					top: -7rem;
+					left: 0;
+				}
+				@media #{$phone}{
+					font-size: 2.8rem;
+				}
+			}
+		}
+		&_inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@media #{$phone}{
+				flex-direction: column;
+			}
+			&-map {
+				width: 49%;
+				height: 32rem;
+				border-radius: .8rem;
+				@media #{$tablet}{
+					height: 42rem;
+					@media #{$phone}{
+						width: 100%;
+						height: 28rem;
+					}
+				}
+				iframe {
+					max-width: 100% !important;
+					height: 100% !important;
+					border-radius: .8rem;
+				}
+			}
+			&-outline {
+				width: 49%;
+				border-radius: .8rem;
+				background: rgba(#fff,0.1);
+				@media #{$phone}{
+					width: 100%;
+					margin-bottom: 2rem;
+				}
+				div {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 2rem 0;
+					border-bottom: .1rem solid rgba(#fff,0.05);
+					&:nth-last-of-type(1) {
+						border: none;
+					}
+					@media #{$tablet}{
+						flex-direction: column;
+					}
+				}
+				dd {
+					width: 100%;
+					font-size: 1.6rem;
+					position: relative;
+					padding-left: 3rem;
+					@media #{$tablet}{
+						padding-left: 5rem;
+						@media #{$phone}{
+							padding-right: 1.5rem;
+							font-size: 1.4rem;
+						}
+					}
+					&:before {
+						content: "";
+						width: .1rem;
+						height: 2rem;
+						background: rgba(#fff,0.05);
+						position: absolute;
+						left: 0;
+						top: 50%;
+						margin-top: -1rem;
+					}
+				}
+				dt {
+					width: 36%;
+					display: flex;
+					flex-shrink: 1;
+					justify-content: flex-start;
+					align-items: center;
+					position: relative;
+					padding: 0 3rem 0 2.7%;
+					@media #{$tablet}{
+						width: 100%;
+					}
+					span {
+						font-size: 1.4rem;
+						color: rgba(#fff,0.6);
+						@media #{$phone}{
+							font-size: 1.2rem;
+						}
+					}
+					i {
+						font-size: 2rem;
+						width: 3.4rem;
+						height: 3.4rem;
+						text-align: center;
+						line-height: 3.4rem;
+						color: $bg;
+						border-radius: 50%;
+						background: linear-gradient(135deg,$gra);
+						margin-right: 1rem;
+						flex-shrink: 0;
+						@media #{$phone}{
+							font-size: 1.8rem;
+							width: 3rem;
+							height: 3rem;
+							line-height: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-contact {
+		max-width: $max;
+		margin: 0 auto;
+		position: relative;
+		padding: 5vh 3% 15vh 3%;
+		z-index: 1;
+		@media #{$tablet}{
+			padding-top: 5vw;
+			padding-bottom: 15vw;
+			@media #{$phone}{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		sup {
+			color: $key;
+		}
+		&_header {
+			text-align: left;
+			padding: 7rem 0 5vh 0;
+			display: flex;
+			justify-content: flex-start;
+			align-items: baseline;
+			@media #{$tablet}{
+				padding-bottom: 5vw;
+				@media #{$phone}{
+					flex-direction: column;
+				}
+			}
+			p {
+				font-size: 1.6rem;
+				padding-left: 2.5rem;
+				small {
+					font-size: 1.2rem;
+				}
+				@media #{$phone}{
+					font-size: 1.4rem;
+					padding-left: 0;
+					small {
+						font-size: 1rem;
+					}
+				}
+			}
+			&-ttl {
+				font-size: 4rem;
+				line-height: 1.3;
+				position: relative;
+				&:before {
+					content: "";
+					background: url("../../img/common/mark.svg") no-repeat;
+					background-size: 7.2rem auto;
+					width: 7.2rem;
+					height: 6.2rem;
+					position: absolute;
+					top: -7rem;
+					left: 0;
+				}
+				@media #{$phone}{
+					font-size: 2.8rem;
+				}
+			}
+		}
+		&_inner {
+			border-radius: .6rem;
+			background: linear-gradient(-135deg,$gra);
+			position: relative;
+			z-index: 1;
+			padding: 3rem 4rem;
+			@media #{$phone}{
+				padding: 2rem;
+			}
+			&:before {
+				content: "";
+				width: calc(100% - .2rem);
+				height: calc(100% - .2rem);
+				background: $bg;
+				position: absolute;
+				left: .1rem;
+				top: .1rem;
+				z-index: -1;
+				border-radius: .6rem;
+			}
+			form {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				.form-set {
+					width: 46%;
+					padding-bottom: 2.5rem;
+					@media #{$tablet}{
+						width: 100%;
+					}
+				}
+				input {
+					&[type="email"],&[type="text"] {
+						width: 100%;
+						border-radius: .5rem;
+						line-height: 2.4rem;
+						font-size: 1.6rem;
+						padding: 1.3rem 1.3rem 1.3rem 5rem;
+						border: none;
+						outline: none;
+						color: $bg;
+						@media #{$phone}{
+							padding-left: 4rem;
+						}
+					}
+					&::placeholder {
+						color: $bg;
+					}
+				}
+				textarea {
+					width: 100%;
+					height: 20rem;
+					border-radius: .5rem;
+					line-height: 2.4rem;
+					font-size: 1.6rem;
+					padding: 1.3rem 1.3rem 1.3rem 5rem;
+					border: none;
+					outline: none;
+					color: $bg;
+					@media #{$phone}{
+						padding-left: 4rem;
+					}
+					&::placeholder {
+						color: $bg;
+					}
+				}
+				.form-btn {
+					padding: 4rem 0 3rem;
+					@media #{$phone}{
+						margin: 0 auto;
+					}
+					button {
+						width: 30rem;
+						height: 6rem;
+						@media #{$phone}{
+							width: 20rem;
+							height: 5rem;
+						}
+					}
+				}
+			}
+			.check {
+				&-meeting {
+					padding-top: 1.5rem;
+				}
+				&-agree {
+					padding-top: 2rem;
+				}
+			}
+			dl {
+				padding: 1rem 0;
+				&.check-area {
+					dt {
+						font-size: 2rem;
+						color: $c5;
+						padding-bottom: 1rem;
+						@media #{$phone}{
+							font-size: 1.6rem;
+						}
+					}
+					dd {
+						ul {
+							li {
+								padding-bottom: .5rem;
+								i {
+									font-size: 3.6rem;
+									margin-right: .8rem;
+									vertical-align: middle;
+									@media #{$phone}{
+										font-size: 2.6rem;
+									}
+								}
+							}
+						}
+						ol {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: flex-start;
+							li {
+								width: 33%;
+								padding-bottom: 1rem;
+								@media #{$phone}{
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+				&.input-area {
+					width: 100%;
+					position: relative;
+					display: flex;
+					justify-content: space-between;
+					@media #{$phone}{
+						flex-wrap: wrap;
+					}
+					> div {
+						width: 49%;
+						position: relative;
+						@media #{$phone}{
+							width: 100%;
+							margin-bottom: .5rem;
+							&:nth-last-of-type(1) {
+								margin-bottom: 0;
+							}
+						}
+						dd {
+							span {
+								top: 0;
+							}
+						}
+						dt i ,dt sup {
+							top: 0;
+						}
+					}
+					dd {
+						width: 100%;
+					}
+					dt {
+						sup {
+							position: absolute;
+							left: calc(5rem - .5em);
+							top: 1rem;
+							z-index: 3;
+							font-size: 1.6rem;
+							line-height: 5rem;
+							@media #{$phone}{
+								font-size: 1.3rem;
+								left: calc(4rem - .5em);
+							}
+						}
+						i {
+							line-height: 5rem;
+							font-size: 2.4rem;
+							color: $c4;
+							position: absolute;
+							left: 0;
+							top: 1rem;
+							width: 5rem;
+							text-align: center;
+							z-index: 3;
+							@media #{$phone}{
+								width: 4rem;
+								font-size: 1.6rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&-profile {
+		padding: 5vh 3% 15vh 3%;
+		max-width: $max;
+		margin: 0 auto;
+		@media #{$tablet}{
+			padding-top: 5vw;
+			padding-bottom: 15vw;
+			@media #{$phone}{
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+		}
+		&_header {
+			padding: 7rem 0 5vh;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: center;
+			@media #{$tablet}{
+				padding-bottom: 5vw;
+			}
+			&-ttl {
+				font-size: 4rem;
+				line-height: 1.3;
+				position: relative;
+				&:before {
+					content: "";
+					background: url("../../img/common/mark.svg") no-repeat;
+					background-size: 7.2rem auto;
+					width: 7.2rem;
+					height: 6.2rem;
+					position: absolute;
+					top: -7rem;
+					right: 0;
+				}
+				@media #{$phone}{
+					font-size: 2.8rem;
+				}
+			}
+		}
+		&_fig {
+			width: 36rem;
+			flex-shrink: 0;
+			@media #{$phone}{
+				width: 100%;
+			}
+			img {
+				border-radius: .8rem;
+			}
+		}
+		&_inner {
+			padding: 5rem 4.5rem 2.5rem;
+			border-radius: .8rem;
+			background: linear-gradient(-135deg,$c1 0%, $c2 20%, $c3 40%, $c4 60%, $c5 80%, #fff 100%);
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@media #{$tablet}{
+				flex-direction: column;
+				background: linear-gradient(45deg,$c1 0%, $c2 20%, $c3 40%, $c4 60%, $c5 80%, #fff 100%);
+				@media #{$phone}{
+					padding: 2rem;
+				}
+			}
+			&-name {
+				font-size: 3.6rem;
+				padding-bottom: 2rem;
+				@media #{$phone}{
+					font-size: 2.6rem;
+					padding-bottom: 1rem;
+				}
+			}
+			&-wrap {
+				width: 100%;
+				padding-left: 1rem;
+				@media #{$tablet}{
+					padding: 2rem 0 0;
+				}
+				p {
+					font-size: 1.6rem;
+					padding-bottom: 1.5em;
+					@media #{$phone}{
+						font-size: 1.4rem;
+					}
+					&.meta {
+						text-align: right;
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+	}
+}
