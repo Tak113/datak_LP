@@ -132,8 +132,13 @@ body #wrap {
 						align-items: flex-start;
 					}
 					@media #{$desktop}{
+						padding-bottom: 0.25em;
+						background: linear-gradient(#fff,#fff) 0 100%/0 1px no-repeat;
+						transition: background .4s;
+						text-decoration: none;
 						&:hover {
 							color: $c1;
+							background-size: 100% 1px;
 						}
 					}
 				}
@@ -429,8 +434,13 @@ body #wrap {
 				font-size: 1.3rem;
 				a {
 					display: block;
+					padding-bottom: 0.25em;
+					background: linear-gradient(#fff,#fff) 0 100%/0 1px no-repeat;
+					transition: background .4s;
+					text-decoration: none;
 					&:hover {
 						opacity: 0.6;
+						background-size: 100% 1px;
 					}
 				}
 			}

@@ -134,7 +134,7 @@
 				background-position: 50% 100%;
 			}
 		}
-		&_scrool {
+		&_scroll {
 			position: absolute;
 			left: 3%;
 			bottom: 0;
@@ -144,6 +144,10 @@
 			align-items: center;
 			width: 1rem;
 			height: 8rem;
+			&.right_scroll {
+				left: unset;
+				right: 3%;
+			}
 			p {
 				width: 1rem;
 				-ms-writing-mode: tb-rl;
@@ -1044,6 +1048,15 @@
 				}
 				&-agree {
 					padding-top: 2rem;
+					a {
+						padding-bottom: 0.25em;
+						background: linear-gradient(#fff,#fff) 0 100%/0 1px no-repeat;
+						transition: background .4s;
+						text-decoration: none;
+						&:hover {
+							background-size: 100% 1px;
+						}
+					}
 				}
 			}
 			dl {
