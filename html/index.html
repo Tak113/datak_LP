@@ -446,23 +446,23 @@
 							<dl class="input-area">
 								<div>
 									<dt><i class="icon-name"></i><sup>*</sup></dt>
-									<dd><input type="text" placeholder="First Name" name="firstname">
+									<dd><input type="text" placeholder="First Name" name="first_name">
 									</dd>
 								</div>
 								<div>
 									<dt><i class="icon-name"></i><sup>*</sup></dt>
-									<dd><input type="text" placeholder="Last Name" name="lastname">
+									<dd><input type="text" placeholder="Last Name" name="last_name">
 									</dd>
 								</div>
 							</dl>
 							<dl class="input-area">
 								<dt><i class="icon-belong"></i><sup>*</sup></dt>
-								<dd><input type="text" placeholder="Company, Institute, School" name="type">
+								<dd><input type="text" placeholder="Company, Institute, School" name="belongs_to">
 								</dd>
 							</dl>
 							<dl class="input-area">
 								<dt><i class="icon-title"></i></dt>
-								<dd><input type="text" placeholder="Job Title" name="title">
+								<dd><input type="text" placeholder="Job Title" name="job_title">
 								</dd>
 							</dl>
 							<dl class="input-area">
@@ -485,10 +485,10 @@
 								<dt>Interest of Services (multiple)</dt>
 								<dd>
 									<ul>
-										<li><input type="checkbox" name="service" id="service1"><label class="checkbox-label" for="service1"><i class="icon-service1"></i>Exploring the power of AI</label></li>
-										<li><input type="checkbox" name="service" id="service2"><label class="checkbox-label" for="service2"><i class="icon-service2"></i>AI Mentoring</label></li>
-										<li><input type="checkbox" name="service" id="service3"><label class="checkbox-label" for="service3"><i class="icon-service3"></i>Driving to AI value</label></li>
-										<li><input type="checkbox" name="service" id="service4"><label class="checkbox-label" for="service4"><i class="icon-service4"></i>Digital Transformation</label></li>
+										<li><input type="checkbox" name="interest" id="interest_exploring_the_power_of_ai"><label class="checkbox-label" for="interest_exploring_the_power_of_ai"><i class="icon-service1"></i>Exploring the power of AI</label></li>
+										<li><input type="checkbox" name="interest" id="interest_ai_mentoring"><label class="checkbox-label" for="interest_ai_mentoring"><i class="icon-service2"></i>AI Mentoring</label></li>
+										<li><input type="checkbox" name="interest" id="interest_driving_to_ai_value"><label class="checkbox-label" for="interest_driving_to_ai_value"><i class="icon-service3"></i>Driving to AI value</label></li>
+										<li><input type="checkbox" name="interest" id="interest_digital_transformation"><label class="checkbox-label" for="interest_digital_transformation"><i class="icon-service4"></i>Digital Transformation</label></li>
 									</ul>
 								</dd>
 							</dl>
@@ -496,11 +496,11 @@
 								<dt><sup>*</sup>Reason of Inquiry</dt>
 								<dd>
 									<ol>
-										<li><input type="checkbox" name="reason" id="reason1"><label class="checkbox-label" for="reason1">Our Services</label></li>
-										<li><input type="checkbox" name="reason" id="reason2"><label class="checkbox-label" for="reason2">Hiring</label></li>
-										<li><input type="checkbox" name="reason" id="reason3"><label class="checkbox-label" for="reason3">Media</label></li>
-										<li><input type="checkbox" name="reason" id="reason4"><label class="checkbox-label" for="reason4">Joint Project</label></li>
-										<li><input type="checkbox" name="reason" id="reason5"><label class="checkbox-label" for="reason5">Other</label></li>
+										<li><input type="checkbox" name="reason" id="reason_our_service"><label class="checkbox-label" for="reason_our_service">Our Services</label></li>
+										<li><input type="checkbox" name="reason" id="reason_hiring"><label class="checkbox-label" for="reason_hiring">Hiring</label></li>
+										<li><input type="checkbox" name="reason" id="reason_media"><label class="checkbox-label" for="reason_media">Media</label></li>
+										<li><input type="checkbox" name="reason" id="reason_joint_project"><label class="checkbox-label" for="reason_joint_project">Joint Project</label></li>
+										<li><input type="checkbox" name="reason" id="reason_other"><label class="checkbox-label" for="reason_other">Other</label></li>
 									</ol>
 								</dd>
 							</dl>
@@ -515,7 +515,7 @@
 							<input type="checkbox" name="agree" id="agree"><label class="checkbox-label" for="agree"><sup>*</sup>I agree to receive communications from Datak, and I understand Datak will process my personal information along with <a href="./privacy.html">Datak’s Privacy Policy</a></label>
 						</div>
 						<div class="form-btn">
-							<button type="submit" class="normal-btn">Send Request</button>
+							<button type="button" class="normal-btn">Send Request</button>
 						</div>
 					</form>
 				</div>
@@ -533,5 +533,62 @@
 			<div class="footer-copy">&copy; 2022 DATAK LLC</div>
 		</footer>
 	</div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+var send_email = function() {
+  var templateParams = {
+  "email": $("form [name=email]").val(),
+  "first_name": $("form [name=first_name]").val(),
+  "last_name": $("form [name=last_name]").val(),
+  "belongs_to": $("form [name=belongs_to]").val(),
+  "job_title": $("form [name=email]").val(),
+  "country": $("form [name=country]").val(),
+  "meeting": $("form [name=meeting]").is(":checked"),
+  "interest_exploring_the_power_of_ai": $("form #interest_exploring_the_power_of_ai").is(":checked"),
+  "interest_ai_mentoring": $("form #interest_ai_mentoring").is(":checked"),
+  "interest_driving_to_ai_value": $("form #interest_driving_to_ai_value").is(":checked"),
+  "interest_digital_transformation": $("form #interest_digital_transformation").is(":checked"),
+  "reason_our_services": $("form #reason_our_services").is(":checked"),
+  "reason_hiring": $("form #reason_hiring").is(":checked"),
+  "reason_media": $("form #reason_media").is(":checked"),
+  "reason_joint_project": $("form #reason_joint_project").is(":checked"),
+  "reason_other": $("form #reason_other").is(":checked"),
+  "details": $("form [name=details]").val(),
+  "agree": $("form [name=agree]").is(":checked"),
+  };
+  if (
+    templateParams.agree == "" ||
+    templateParams.email == "" ||
+    templateParams.first_name == "" ||
+    templateParams.last_name == "" ||
+    templateParams.belongs_to == "" ||
+    (
+      !templateParams.reason_our_services &&
+      !templateParams.reason_hiring &&
+      !templateParams.reason_media &&
+      !templateParams.reason_joint_project &&
+      !templateParams.reason_other
+    )
+  ) {
+    alert("Please Input Required.");
+    return;
+  }
+  emailjs.send('service_3ur0jde', 'template_baiznpt', templateParams)
+  .then(function(response) {
+    console.log('SUCCESS!', response.status, response.text);
+    alert("Contact has sent Successfully.");
+  }, function(error) {
+    console.log('FAILED...', error);
+    alert("Error Occured.");
+  });
+};
+
+(function() {
+  emailjs.init("user_ReSazq0jIVau9SinA6cXM");
+  $("form .form-btn button").click(function() {
+    send_email();
+  });
+})();
+</script>
 </body>
 </html>
