@@ -1,4 +1,4 @@
-# Datak LP Renewel in Janually 2022
+# Datak LP Renewel in January 2022
 
 ## Branch
 - `main` : master branch for deployment. to be merged to `deploy` branch for production
