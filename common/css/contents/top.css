@@ -1147,12 +1147,12 @@
 }
 .section-contact_inner .check-agree a {
   padding-bottom: 0.25em;
-  background: linear-gradient(#fff, #fff) 0 100%/0 1px no-repeat;
+  background: linear-gradient(#fff, #fff) 0 100%/100% 1px no-repeat;
   transition: background 0.4s;
   text-decoration: none;
 }
 .section-contact_inner .check-agree a:hover {
-  background-size: 100% 1px;
+  background-size: 0% 1px;
 }
 .section-contact_inner dl {
   padding: 1rem 0;
