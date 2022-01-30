@@ -77,5 +77,14 @@
   overflow: visible;
   list-style: disc;
 }
+.section-privacy_inner a {
+  padding-bottom: 0.25em;
+  background: linear-gradient(#fff, #fff) 0 100%/100% 1px no-repeat;
+  transition: background 0.4s;
+  text-decoration: none;
+}
+.section-privacy_inner a:hover {
+  background-size: 0% 1px;
+}
 
 /*# sourceMappingURL=privacy.css.map */
