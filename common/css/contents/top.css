@@ -1372,4 +1372,20 @@
   font-size: 1.2rem;
 }
 
+#video-area {
+  position: relative;
+}
+#video-area video {
+  max-width: 100%;
+  margin-top: 100px;
+  position: absolute;
+  right: 9.5%;
+  z-index: -1;
+}
+@media only screen and (max-width:767px) {
+  #video-area video {
+    right: 0;
+  }
+}
+
 /*# sourceMappingURL=top.css.map */

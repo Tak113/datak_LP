@@ -1255,3 +1255,17 @@
 		}
 	}
 }
+
+#video-area {
+  position: relative;
+  video {
+    max-width: 100%;
+    margin-top: 100px;
+    position: absolute;
+    right: 9.5%;
+    @media #{$phone}{
+      right: 0;
+    }
+    z-index: -1;
+  }
+}
