@@ -46,13 +46,19 @@
 			</nav>
 			<div class="header-menu"><span></span><span></span></div>
 		</header><!-- ▲ header -->
-		<div class="div-mv" style="background-image: url(common/img/top/sample.png)">
+		<div class="div-mv">
 			<div class="div-mv_catch">
 				<p><strong>Customized AI Solution</strong></p>
 				<p>Make your data strategic advantages</p>
 				<div class="div-mv_btn"><a href="" class="normal-btn">Talk to Sales</a></div>
 			</div>
 			<div class="div-mv_scroll"><p>SCROLL</p><span></span></div>
+	<div id="video-area">
+		<video id="video" poster="common/images/top/sample.png" playsinline muted loop>
+		<source src="common/video/main.mp4" type="video/mp4">
+		<p>動画を再生できる環境ではありません。</p>
+		</video>
+	</div>
 		</div>
 		<main class="container">
 			<section class="section-service" id="service">
@@ -589,6 +595,12 @@ var send_email = function() {
   $("form .form-btn button").click(function() {
     send_email();
   });
+  var video = document.getElementById("video");
+  video.addEventListener('loadedmetadata', function() {
+    video.play();
+    //alert(111);
+  });
+  video.load();
 })();
 </script>
 </body>
