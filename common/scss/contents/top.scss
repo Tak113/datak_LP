@@ -132,6 +132,7 @@
 			background-position: 0% 100%;
 			@media #{$phone}{
 				background-position: 50% 100%;
+				background-image: url(../../img/top/sample.png);
 			}
 		}
 		&_scroll {
@@ -1264,9 +1265,10 @@
     position: absolute;
     left: 10%;
     @media #{$phone}{
-      max-width: 200%;
-      margin-top: 150px;
-      left: 5%;
+    	display: none;
+      // max-width: 200%;
+      // margin-top: 150px;
+      // left: 5%;
     }
     @media only screen and (min-width:1500px){
     	left:30%;
