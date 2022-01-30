@@ -12,9 +12,9 @@
 
 ### sscs compile
 - `cd common`
-- for entire scss folder compile, `sass scss css`
-- and scss change is combiled and reflected
+- for entire scss folder compile, `sass scss css` <span stype="color:red">seems this does not work and needs each single file</span>>
 - for a file based compile, `sass scss/xxx.scss css/xxx.css`
+- and scss change is combiled and reflected
 
 ### External Link (Datak Lab)
 - lab.datak.biz, digital ocean droplet which has 2 CMSs, one for blog and other for gallery
