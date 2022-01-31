@@ -1261,9 +1261,10 @@
   position: relative;
   video {
     max-width: 100%;
-    margin-top: 150px;
+    margin-top: 5vh;
+    height: 90vh;
     position: absolute;
-    left: 10%;
+    left: 30%;
     @media #{$phone}{
     	display: none;
       // max-width: 200%;
