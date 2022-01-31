@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta name="keywords" content="">
 	<meta name="description" content="DATAK / Customized AI Solution / Make your data strategic advantages">
-	<title>DATAK</title>
+	<title>DATAK | Customized AI</title>
 	<link rel="apple-touch-icon" sizes="180x180" href="common/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="common/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="common/favicon/favicon-16x16.png">
@@ -229,7 +229,7 @@
 					<li><a href="./privacy.html">Privacy Policy</a></li>
 				</ul>
 			</nav>
-			<div class="footer-copy">&copy; 2022 DATAK LLC</div>
+			<div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> DATAK LLC</div>
 		</footer>
 	</div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -269,16 +269,16 @@ var send_email = function() {
       !templateParams.reason_other
     )
   ) {
-    alert("Please Input Required.");
+    alert("Fill out all *Required sections before send request");
     return;
   }
   emailjs.send('service_ctobdkb', 'template_baiznpt', templateParams)
   .then(function(response) {
     console.log('SUCCESS!', response.status, response.text);
-    alert("Contact has sent Successfully.");
+    alert("Your message has been sent successfully");
   }, function(error) {
     console.log('FAILED...', error);
-    alert("Error Occured.");
+    alert("Error has been occured");
   });
 };
 
