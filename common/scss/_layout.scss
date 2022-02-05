@@ -185,6 +185,11 @@ body #wrap {
 							background-size: 100% 1px;
 						}
 					}
+					span {
+						display: inline-block;
+						width: 70px;
+						text-align: center;
+					}
 				}
 				&.language-btn {
 					@media #{$tablet}{
@@ -209,6 +214,11 @@ body #wrap {
 								margin: -.3rem 0 0 -.3rem;
 								position: absolute;
 							}
+						}
+						span {
+							display: inline-block;
+							width: 20px;
+							text-align: center;
 						}
 					}
 				}
@@ -486,6 +496,11 @@ body #wrap {
 						opacity: 0.6;
 						background-size: 100% 1px;
 					}
+					span {
+						display: inline-block;
+						width: 130px;
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -501,4 +516,19 @@ body #wrap {
 			}
 		}
 	}
+}
+
+button,
+a {
+  .show-hover {
+    display: none !important;
+  }
+  &:hover {
+    .hide-hover {
+      display: none !important;
+    }
+    .show-hover {
+      display: inline-block !important;
+    }
+  }
 }
