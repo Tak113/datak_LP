@@ -260,6 +260,10 @@
     font-size: 2.8rem;
   }
 }
+.section-service_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+}
 .section-service_header p {
   font-size: 1.6rem;
 }
@@ -389,6 +393,15 @@
     font-size: 3rem;
   }
 }
+.section-service_inner-tab_item .show-hover {
+  display: none !important;
+}
+.section-service_inner-tab_item:hover .hide-hover {
+  display: none !important;
+}
+.section-service_inner-tab_item:hover .show-hover {
+  display: inline-block !important;
+}
 .section-service_inner .article-service {
   background: #001B2D;
   border-radius: 0.8rem;
@@ -492,6 +505,10 @@
     font-size: 2rem;
   }
 }
+.section-service_inner .article-service_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+}
 .section-service_inner .article-service_inner {
   display: flex;
   flex-direction: column;
@@ -583,6 +600,11 @@
   .section-case_header-ttl {
     font-size: 2.8rem;
   }
+}
+.section-case_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  float: right;
 }
 @media only screen and (max-width:767px) {
   .section-case_header-btn {
@@ -845,6 +867,10 @@
     font-size: 2.8rem;
   }
 }
+.section-company_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+}
 .section-company_inner {
   display: flex;
   justify-content: space-between;
@@ -1046,6 +1072,10 @@
   .section-contact_header-ttl {
     font-size: 2.8rem;
   }
+}
+.section-contact_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
 }
 .section-contact_inner {
   border-radius: 0.6rem;
@@ -1307,6 +1337,11 @@
   .section-profile_header-ttl {
     font-size: 2.8rem;
   }
+}
+.section-profile_header-jp {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  float: right;
 }
 .section-profile_fig {
   width: 36rem;

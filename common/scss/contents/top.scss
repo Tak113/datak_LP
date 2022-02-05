@@ -245,6 +245,10 @@
 					font-size: 2.8rem;
 				}
 			}
+			&-jp {
+				font-size: 1.4rem;
+				color: rgba(#fff,0.6);
+			}
 			p {
 				font-size: 1.6rem;
 				@media #{$phone}{
@@ -366,6 +370,17 @@
 							font-size: 3rem;
 						}
 					}
+					.show-hover {
+  				  display: none !important;
+  				}
+  				&:hover {
+  				  .hide-hover {
+  				    display: none !important;
+  				  }
+  				  .show-hover {
+  				    display: inline-block !important;
+  				  }
+  				}
 				}
 			}
 			.article-service {
@@ -455,6 +470,10 @@
 							font-size: 2rem;
 						}
 					}
+					&-jp {
+						font-size: 1.4rem;
+						color: rgba(#fff,0.6);
+					}
 				}
 				&_inner {
 					display: flex;
@@ -538,6 +557,11 @@
 				@media #{$phone}{
 					font-size: 2.8rem;
 				}
+			}
+			&-jp {
+				font-size: 1.4rem;
+				color: rgba(#fff,0.6);
+				float: right;
 			}
 			&-btn {
 				@media #{$phone}{
@@ -790,6 +814,10 @@
 					font-size: 2.8rem;
 				}
 			}
+			&-jp {
+				font-size: 1.4rem;
+				color: rgba(#fff,0.6);
+			}
 		}
 		&_inner {
 			display: flex;
@@ -959,6 +987,10 @@
 				@media #{$phone}{
 					font-size: 2.8rem;
 				}
+			}
+			&-jp {
+				font-size: 1.4rem;
+				color: rgba(#fff,0.6);
 			}
 		}
 		&_inner {
@@ -1200,6 +1232,11 @@
 				@media #{$phone}{
 					font-size: 2.8rem;
 				}
+			}
+			&-jp {
+				font-size: 1.4rem;
+				color: rgba(#fff,0.6);
+				float: right;
 			}
 		}
 		&_fig {
