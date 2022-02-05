@@ -451,7 +451,7 @@ input:focus {
   line-height: 1;
   font-family: "icomoon";
   text-align: center;
-  content: "\e904";
+  content: "";
   color: #002137;
   top: 50%;
   margin-top: -0.5em;
@@ -521,7 +521,7 @@ input[type=checkbox]:checked + .checkbox-label:after {
 }
 .checkbox-label:before {
   font-family: "icomoon";
-  content: "\e911";
+  content: "";
   opacity: 0;
   left: 0;
   width: 2rem;
@@ -550,8 +550,8 @@ a.normal-btn, button.normal-btn {
 }
 a.normal-btn:after, button.normal-btn:after {
   content: "";
-  width: calc(100% - 0.2rem);
-  height: calc(100% - 0.2rem);
+  width: calc(100% - .2rem);
+  height: calc(100% - .2rem);
   border-radius: 4rem;
   position: absolute;
   background: #002137;
@@ -833,7 +833,7 @@ body #wrap.on {
 }
 .container-header_pankuzu ul li a:after {
   font-family: "icomoon";
-  content: "\e902";
+  content: "";
   color: #c88bc4;
   margin-right: 0.2rem;
 }
@@ -1123,79 +1123,79 @@ a:hover .show-hover {
 }
 
 .icon-check:before {
-  content: "\e911";
+  content: "";
 }
 
 .icon-yd:before {
-  content: "\e910";
+  content: "";
 }
 
 .icon-yu:before {
-  content: "\e913";
+  content: "";
 }
 
 .icon-yl:before {
-  content: "\e900";
+  content: "";
 }
 
 .icon-yr:before {
-  content: "\e901";
+  content: "";
 }
 
 .icon-founder:before {
-  content: "\e902";
+  content: "";
 }
 
 .icon-company:before {
-  content: "\e903";
+  content: "";
 }
 
 .icon-d:before {
-  content: "\e904";
+  content: "";
 }
 
 .icon-l:before {
-  content: "\e905";
+  content: "";
 }
 
 .icon-r:before {
-  content: "\e906";
+  content: "";
 }
 
 .icon-u:before {
-  content: "\e907";
+  content: "";
 }
 
 .icon-foundation:before {
-  content: "\e908";
+  content: "";
 }
 
 .icon-belong:before {
-  content: "\e909";
+  content: "";
 }
 
 .icon-country:before {
-  content: "\e90a";
+  content: "";
 }
 
 .icon-email:before {
-  content: "\e90b";
+  content: "";
 }
 
 .icon-access:before {
-  content: "\e90c";
+  content: "";
 }
 
 .icon-detail:before {
-  content: "\e90d";
+  content: "";
 }
 
 .icon-title:before {
-  content: "\e90e";
+  content: "";
 }
 
 .icon-name:before {
-  content: "\e90f";
+  content: "";
 }
 
 .icon-service1:before, .icon-service2:before, .icon-service3:before, .icon-service4:before {
