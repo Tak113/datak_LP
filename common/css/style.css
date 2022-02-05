@@ -451,7 +451,7 @@ input:focus {
   line-height: 1;
   font-family: "icomoon";
   text-align: center;
-  content: "";
+  content: "\e904";
   color: #002137;
   top: 50%;
   margin-top: -0.5em;
@@ -521,7 +521,7 @@ input[type=checkbox]:checked + .checkbox-label:after {
 }
 .checkbox-label:before {
   font-family: "icomoon";
-  content: "";
+  content: "\e911";
   opacity: 0;
   left: 0;
   width: 2rem;
@@ -550,8 +550,8 @@ a.normal-btn, button.normal-btn {
 }
 a.normal-btn:after, button.normal-btn:after {
   content: "";
-  width: calc(100% - .2rem);
-  height: calc(100% - .2rem);
+  width: calc(100% - 0.2rem);
+  height: calc(100% - 0.2rem);
   border-radius: 4rem;
   position: absolute;
   background: #002137;
@@ -644,21 +644,8 @@ body #wrap.on {
   top: -0.5rem;
   left: 0;
 }
-.header-logo_img a:before:hover {
-  content: "";
-  background: url("../img/common/mark_on.svg") no-repeat;
-  background-size: contain;
-  width: 4.2rem;
-  height: 4.2rem;
-  position: absolute;
-  top: -0.5rem;
-  left: 0;
-  z-index: 9999;
-}
 .header-logo:hover .logo {
-  position: absolute;
-  visibility: hidden;
-  animation: hidden 1s linear 0s;
+  display: none;
 }
 .header-logo:hover .logo_on {
   display: block;
@@ -766,6 +753,11 @@ body #wrap.on {
     background-size: 100% 1px;
   }
 }
+.header-nav ul li a span {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+}
 @media only screen and (max-width:1024px) {
   .header-nav ul li.language-btn {
     border: none;
@@ -789,6 +781,11 @@ body #wrap.on {
   top: 50%;
   margin: -0.3rem 0 0 -0.3rem;
   position: absolute;
+}
+.header-nav ul li.language-btn a span {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
 }
 
 /* --------------------------------------
@@ -836,7 +833,7 @@ body #wrap.on {
 }
 .container-header_pankuzu ul li a:after {
   font-family: "icomoon";
-  content: "";
+  content: "\e902";
   color: #c88bc4;
   margin-right: 0.2rem;
 }
@@ -1074,6 +1071,11 @@ body #wrap.on {
   opacity: 0.6;
   background-size: 100% 1px;
 }
+.footer-nav ul li a span {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+}
 .footer-copy {
   font-size: 1rem;
   line-height: 1;
@@ -1085,6 +1087,19 @@ body #wrap.on {
     padding: 7.5vw 0;
   }
 }
+button .show-hover,
+a .show-hover {
+  display: none !important;
+}
+button:hover .hide-hover,
+a:hover .hide-hover {
+  display: none !important;
+}
+button:hover .show-hover,
+a:hover .show-hover {
+  display: inline-block !important;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?lr8ue2");
@@ -1108,79 +1123,79 @@ body #wrap.on {
 }
 
 .icon-check:before {
-  content: "";
+  content: "\e911";
 }
 
 .icon-yd:before {
-  content: "";
+  content: "\e910";
 }
 
 .icon-yu:before {
-  content: "";
+  content: "\e913";
 }
 
 .icon-yl:before {
-  content: "";
+  content: "\e900";
 }
 
 .icon-yr:before {
-  content: "";
+  content: "\e901";
 }
 
 .icon-founder:before {
-  content: "";
+  content: "\e902";
 }
 
 .icon-company:before {
-  content: "";
+  content: "\e903";
 }
 
 .icon-d:before {
-  content: "";
+  content: "\e904";
 }
 
 .icon-l:before {
-  content: "";
+  content: "\e905";
 }
 
 .icon-r:before {
-  content: "";
+  content: "\e906";
 }
 
 .icon-u:before {
-  content: "";
+  content: "\e907";
 }
 
 .icon-foundation:before {
-  content: "";
+  content: "\e908";
 }
 
 .icon-belong:before {
-  content: "";
+  content: "\e909";
 }
 
 .icon-country:before {
-  content: "";
+  content: "\e90a";
 }
 
 .icon-email:before {
-  content: "";
+  content: "\e90b";
 }
 
 .icon-access:before {
-  content: "";
+  content: "\e90c";
 }
 
 .icon-detail:before {
-  content: "";
+  content: "\e90d";
 }
 
 .icon-title:before {
-  content: "";
+  content: "\e90e";
 }
 
 .icon-name:before {
-  content: "";
+  content: "\e90f";
 }
 
 .icon-service1:before, .icon-service2:before, .icon-service3:before, .icon-service4:before {
