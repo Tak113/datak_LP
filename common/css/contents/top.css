@@ -264,6 +264,11 @@
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
 }
+@media only screen and (max-width:767px) {
+  .section-service_header-jp {
+    font-size: 1.2rem;
+  }
+}
 .section-service_header p {
   font-size: 1.6rem;
 }
@@ -607,6 +612,11 @@
   float: right;
 }
 @media only screen and (max-width:767px) {
+  .section-case_header-jp {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width:767px) {
   .section-case_header-btn {
     padding-top: 1rem;
   }
@@ -871,6 +881,11 @@
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
 }
+@media only screen and (max-width:767px) {
+  .section-company_header-jp {
+    font-size: 1.2rem;
+  }
+}
 .section-company_inner {
   display: flex;
   justify-content: space-between;
@@ -1076,6 +1091,11 @@
 .section-contact_header-jp {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (max-width:767px) {
+  .section-contact_header-jp {
+    font-size: 1.2rem;
+  }
 }
 .section-contact_inner {
   border-radius: 0.6rem;
@@ -1342,6 +1362,11 @@
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.6);
   float: right;
+}
+@media only screen and (max-width:767px) {
+  .section-profile_header-jp {
+    font-size: 1.2rem;
+  }
 }
 .section-profile_fig {
   width: 36rem;

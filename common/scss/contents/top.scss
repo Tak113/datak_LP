@@ -248,6 +248,9 @@
 			&-jp {
 				font-size: 1.4rem;
 				color: rgba(#fff,0.6);
+				@media #{$phone}{
+					font-size: 1.2rem;
+				}
 			}
 			p {
 				font-size: 1.6rem;
@@ -562,6 +565,9 @@
 				font-size: 1.4rem;
 				color: rgba(#fff,0.6);
 				float: right;
+				@media #{$phone}{
+					font-size: 1.2rem;
+				}
 			}
 			&-btn {
 				@media #{$phone}{
@@ -817,6 +823,9 @@
 			&-jp {
 				font-size: 1.4rem;
 				color: rgba(#fff,0.6);
+				@media #{$phone}{
+					font-size: 1.2rem;
+				}
 			}
 		}
 		&_inner {
@@ -991,6 +1000,9 @@
 			&-jp {
 				font-size: 1.4rem;
 				color: rgba(#fff,0.6);
+				@media #{$phone}{
+					font-size: 1.2rem;
+				}
 			}
 		}
 		&_inner {
@@ -1237,6 +1249,9 @@
 				font-size: 1.4rem;
 				color: rgba(#fff,0.6);
 				float: right;
+				@media #{$phone}{
+					font-size: 1.2rem;
+				}
 			}
 		}
 		&_fig {
