@@ -511,8 +511,13 @@
   }
 }
 .section-service_inner .article-service_header-jp {
-  font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 2rem;
+  line-height: 1.2;
+}
+@media only screen and (max-width:767px) {
+  .section-service_inner .article-service_header-jp {
+    font-size: 1.4rem;
+  }
 }
 .section-service_inner .article-service_inner {
   display: flex;
