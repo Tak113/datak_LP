@@ -435,8 +435,8 @@
 }
 .section-service_inner .article-service_wrap:before {
   content: "";
-  width: calc(100% - .2rem);
-  height: calc(100% - .2rem);
+  width: calc(100% - 0.2rem);
+  height: calc(100% - 0.2rem);
   background: #001B2D;
   position: absolute;
   left: 0.1rem;
@@ -1116,8 +1116,8 @@
 }
 .section-contact_inner:before {
   content: "";
-  width: calc(100% - .2rem);
-  height: calc(100% - .2rem);
+  width: calc(100% - 0.2rem);
+  height: calc(100% - 0.2rem);
   background: #002137;
   position: absolute;
   left: 0.1rem;
@@ -1285,7 +1285,7 @@
 }
 .section-contact_inner dl.input-area dt sup {
   position: absolute;
-  left: calc(5rem - .5em);
+  left: calc(5rem - 0.5em);
   top: 1rem;
   z-index: 3;
   font-size: 1.6rem;
@@ -1294,7 +1294,7 @@
 @media only screen and (max-width:767px) {
   .section-contact_inner dl.input-area dt sup {
     font-size: 1.3rem;
-    left: calc(4rem - .5em);
+    left: calc(4rem - 0.5em);
   }
 }
 .section-contact_inner dl.input-area dt i {
